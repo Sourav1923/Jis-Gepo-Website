@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-primary: #2236ea; /* Blue */
+    --color-secondary: #f0f4ff; /* Light Blue */
+    --color-danger: #ff7782; /* Red */
+    --color-success: #41f1b6; /* Green */
+    --color-warning: #ffbb55; /* Yellow */
+    --color-white: #ffffff; /* White */
+    --color-dark: #363949; /* Dark Gray */
+    --color-light: rgba(132, 139, 200, 0.18); /* Light Gray */
+    --color-background: #f9f6f6; /* Background Color */
+    --card-border-radius: 1.5rem; /* Card Border Radius */
+    --box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1); /* Box Shadow */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-background);
+    color: var(--color-dark);
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+
+aside {
+    height: 100vh;
+    background: var(--color-white);
+    box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+aside .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+aside .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+aside .logo img {
+    width: 2rem;
+    height: 2rem;
+}
+
+aside .close {
+    cursor: pointer;
+}
+
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+aside .sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    color: var(--color-dark);
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+aside .sidebar a:hover {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+aside .sidebar a.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+main {
+    margin-top: 3.5rem;
+    padding: 1rem;
+}
+
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.insights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.insights > div {
+    background: var(--color-white);
+    padding: 1.5rem;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s;
+}
+
+.insights > div:hover {
+    transform: translateY(-5px);
+}
+
+.insights > div span {
+    background: var(--color-primary);
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--color-white);
+    font-size: 2rem;
+}
+
+.collaboration-requests {
+    margin-top: 2rem;
+}
+
+.collaboration-requests table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.collaboration-requests th,
+.collaboration-requests td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-light);
+}
+
+.collaboration-requests .pending {
+    color: var(--color-warning);
+}
+
+.collaboration-requests .approved {
+    color: var(--color-success);
+}
+
+.collaboration-requests button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--card-border-radius);
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.collaboration-requests .approve {
+    background-color: var(--color-success);
+    color: var(--color-white);
+}
+
+.collaboration-requests .reject {
+    background-color: var(--color-danger);
+    color: var(--color-white);
+}
+
+.events-notices {
+    margin-top: 2rem;
+}
+
+.events-notices .event-notice {
+    background: var(--color-white);
+    padding: 1.5rem;
+    border-radius: var(--card-border-radius);
+    margin-bottom: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.events-notices h2 {
+    margin-bottom: 1rem;
+}
+
+.events-notices h3 {
+    margin: 0.5rem 0;
+}
+
+.events-notices p {
+    margin: 0.2rem 0;
+}
+
+.right {
+    margin-top: 1.4rem;
+}
+
+.right .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--color-white);
+    box-shadow: var(--box-shadow);
+}
+
+.right .theme-toggler {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.right .theme-toggler span {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+.right .profile {
+    display: flex;
+    align-items: center;
+}
+
+.right .profile-photo {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.right .recent-updates {
+    margin-top: 1rem;
+}
+
+.right .recent-updates h2 {
+    margin-bottom: 0.8rem;
+}
+
+.right .recent-updates .updates {
+    background: var(--color-white);
+    padding: 1.5rem;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.right .recent-updates .updates .update {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.right .recent-updates .updates .update .profile-photo {
+    margin-right: 1rem;
+}
+
+.right .sales-analytics {
+    margin-top: 2rem;
+}
+
+.right .sales-analytics h2 {
+    margin-bottom: 0.8rem;
+}
+
+.right .sales-analytics .item {
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s;
+}
+
+.right .sales-analytics .item:hover {
+    transform: translateY(-5px);
+}
+
+.right .sales-analytics .item .icon {
+    padding: 0.6rem;
+    color: var(--color-white);
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.dark-mode {
+    background: #181a1e;
+    color: #edeffd;
+}
+
+.dark-mode aside {
+    background: #202528;
+}
+
+.dark-mode aside .top {
+    background: #111e88;
+}
+
+.dark-mode aside .sidebar a {
+    color: #edeffd;
+}
+
+.dark-mode aside .sidebar a:hover {
+    background: #a3bdcc;
+}
+
+.dark-mode aside .sidebar a.active {
+    background: #111e88;
+}
+
+.dark-mode main {
+    background: #181a1e;
+}
+
+.dark-mode .insights > div {
+    background: #202528;
+}
+
+.dark-mode .collaboration-requests table {
+    background: #202528;
+}
+
+.dark-mode .events-notices .event-notice {
+    background: #202528;
+}
+
+.dark-mode .right .top {
+    background: #202528;
+}
+
+.dark-mode .right .recent-updates .updates {
+    background: #202528;
+}
+
+.dark-mode .right .sales-analytics .item {
+    background: #202528;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 94%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+    aside .logo img {
+        height: 3rem;
+        width: 3em;
+        margin-left: 1.6rem;
+    }
+    aside .logo h2 {
+        display: none;
+    }
+    aside .sidebar h3 {
+        display: none;
+    }
+    aside .sidebar a {
+        width: 5.6em;
+    }
+    main .insights {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    main .recent-orders {
+        width: 94%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 8.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    aside {
+        position: fixed;
+        left: -100%;
+        background: var(--color-white);
+        width: 18rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        padding-right: var(--card-padding);
+        display: none;
+        animation: showMenu 400ms ease forwards;
+    }
+    @keyframes showMenu {
+        to {
+            left: 0;
+        }
+    }
+    aside .logo {
+        margin-left: 1rem;
+    }
+    aside .logo h2 {
+        display: inline;
+    }
+    aside .sidebar h3 {
+        display: inline;
+    }
+    aside .sidebar a {
+        width: 100%;
+        height: 3.4rem;
+    }
+    main {
+        margin-top: 4rem;
+        padding: 0 1rem;
+    }
+    .right {
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+    .right .top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding: 0 0.8rem;
+        background: var(--color-white);
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main table thead th {
+        font-size: 11px;
+    }
+    main table tbody td {
+        font-size: 10px;
+    }
+}
