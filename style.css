@@ -665,3 +665,50 @@ header.sticky{
 		bottom: 70px;
 	}
 }
+
+
+/*about*/
+
+
+
+@media (max-width: 786px) {
+	
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-img img {
+        width: 40vw;
+        margin-top: 4rem;
+    }
+
+	.about-content p {
+		font-size: small;
+	}
+	.about-content h3 {
+		font-size: medium;
+	}
+
+	#read-more-btn{
+		display: inline-block;
+		padding: 0.75rem 0.75rem;
+		background: var(--main-color);
+		border-radius: 2rem;
+		box-shadow: none;
+		font-size: 0.5rem;
+		color: var(--bg-color);
+		letter-spacing: 0.1rem;
+		font-weight: 300;
+	}
+     
+
+}
+
+@media (max-width: 617px) {
+
+    .about-img img {
+        width: 40vw;
+        margin-top: 4rem;
+    }
+}
