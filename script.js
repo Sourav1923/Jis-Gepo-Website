@@ -61,3 +61,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+// Linking 
+   // International partners
+
+    document.querySelector(".diu").addEventListener("click", ()=>{
+    location.assign("https://diu.ac/");
+   });
+    document.querySelector(".ait").addEventListener("click", ()=>{
+    location.assign("https://ait.ac.th/");
+   });
+    document.querySelector(".EsSoe").addEventListener("click", ()=>{
+    location.assign("https://en.esigelec.fr/");
+   });
+
+   // national partners
+    document.querySelector(".jisu").addEventListener("click", ()=>{
+    location.assign("https://www.jisuniversity.ac.in/");
+   });
+    document.querySelector(".jisce").addEventListener("click", ()=>{
+    location.assign("https://www.jiscollege.ac.in/");
+   });
+    document.querySelector(".nit").addEventListener("click", ()=>{
+    location.assign("https://www.nit.ac.in/");
+   });
+    document.querySelector(".gnit").addEventListener("click", ()=>{
+    location.assign("https://gnit.ac.in/");
+   });
+    document.querySelector(".aec").addEventListener("click", ()=>{
+    location.assign("http://www.aecwb.edu.in/");
+   });
+    document.querySelector(".jisRe").addEventListener("click", ()=>{
+    location.assign("https://jisiasr.org/");
+   });
+
+   
