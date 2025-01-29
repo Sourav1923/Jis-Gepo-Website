@@ -1,0 +1,193 @@
+ /* General Styles */
+ body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #101224;
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* World Map */
+.world-map {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1em;
+    position: relative;
+}
+
+.world-map img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Title */
+.title {
+    text-align: center;
+    margin: 2em 0;
+    padding: 0 1em;
+}
+
+.title p {
+    max-width: 500px;
+    margin: 1em auto;
+    line-height: 27px;
+}
+
+/* Pins */
+.pin {
+    background: #4362f8;
+    position: absolute;
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+}
+
+.pin::before {
+    content: '';
+    background: #4362f8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: pulse 1.3s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.pin span {
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    left: 1.5em;
+    top: 50%;
+    background: #fff;
+    border-radius: 3em;
+    padding: 0.3em 0.6em;
+    font-size: 0.9em;
+    color: #000;
+    cursor: pointer;
+}
+
+.diu { top: 58%; left: 72%; }
+.diu span { transform: translateY(-50%); }
+
+.assocham { top: 58%; left: 67%; }
+.assocham span { left: -9em; transform: translateY(-50%); }
+
+.ait { top: 60%; left: 75%; }
+.ait span { transform: translateY(0%); }
+
+.esigelec { top: 42%; left: 47%; }
+.mcn { top: 48%; left: 29%; }
+
+/* Detail Panel */
+.detail-panel {
+    position: fixed;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+    display: none;
+    color: #000;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        filter: brightness(100%);
+   }
+    }
+
+.dest-content h4{
+    font-size: large;
+
+}
+
+.detail-panel.active {
+    display: block; /* Show when active */
+}
+
+.detail-panel .box .thum img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.detail-panel .dest-content {
+    margin-top: 20px;
+}
+
+.detail-panel .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Animation */
+@keyframes pulse {
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2.5);
+    }
+}
+
+/* Responsive Design (adjust pin and label sizes for smaller devices) */
+@media (max-width: 768px) {
+.pin {
+width: 0.5em;
+height: 0.5em;
+}  .detail-panel {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 90%;
+max-width: 300px;
+background: #fff;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+z-index: 1000;
+padding: 20px;
+display: none; /* Initially hidden */
+color: #000;
+}
+
+.pin span {
+font-size: 0.7em; /* Reduce font size of the labels */
+padding: 0.2em 0.5em;
+left: 1.2em; /* Adjust label position */
+}
+
+.assocham span {
+left: -7em; /* Adjust Assocham label for smaller screens */
+}
+}
+
+@media (max-width: 480px) {
+.pin {
+width: 0.4em;
+height: 0.4em;
+}
+
+.pin span {
+font-size: 0.6em;
+padding: 0.2em 0.4em;
+left: 1em;
+}
+
+.assocham span {
+left: -6em; /* Further adjust Assocham label */
+}
+}

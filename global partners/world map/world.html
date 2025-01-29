@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive World Map</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <!-- Title -->
+    <div class="title">
+        <h1>Interactive World Map</h1>
+        <p>Click on the pins or names to see more details about each location.</p>
+    </div>
+
+    <!-- World Map -->
+    <div class="world-map">
+        <img src="worldmap.png" alt="World Map">
+        
+        <!-- Pins -->
+        <div class="pin diu" data-name="diu">
+            <span>Dhaka International University</span>
+        </div>
+        <div class="pin assocham" data-name="assocham">
+            <span>Assocham India</span>
+        </div>
+        <div class="pin ait" data-name="ait">
+            <span>Asian Institute of Technology</span>
+        </div>
+        <div class="pin esigelec" data-name="esigelec">
+            <span>ESIGELEC- School of Engineering</span>
+        </div>
+        <div class="pin mcn" data-name="mcn">
+            <span>Metropolitan College of New York</span>
+        </div>
+    </div>
+
+    <!-- Detail Panels -->
+    <div class="detail-panel " id="diu-panel" >
+        <div class="box diu">
+            <div class="thum">
+                <img src="globalimg/diu.png" alt="Dhaka International University">
+            </div>
+            <div class="dest-content">
+                <h4>Dhaka International University</h4>
+                <!-- <p>Details about Dhaka International University...</p> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="detail-panel" id="assocham-panel" >
+        <div class="box assocham">
+            <div class="thum">
+                <img src="globalimg/assocham.jpg" alt="Assocham India">
+            </div>
+            <div class="dest-content">
+                <h4>Assocham India</h4>
+                <!-- <p>Details about Assocham India...</p> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="detail-panel" id="ait-panel" >
+        <div class="box ait">
+            <div class="thum">
+                <img src="globalimg/ait.png" alt="ait">
+            </div>
+            <div class="dest-content">
+                <h4>Asian Institute of Technology</h4>
+                <!-- <p>Details about Assocham India...</p> -->
+            </div>
+        </div>
+    </div>
+    <div class="detail-panel" id="esigelec-panel" >
+        <div class="box esigelec ">
+            <div class="thum">
+                <img src="globalimg/esigelec.png" alt="Assocham India">
+            </div>
+            <div class="dest-content">
+                <h4>ESIGELEC- School of Engineering</h4>
+                <!-- <p>Details about Assocham India...</p> -->
+            </div>
+        </div>
+    </div>
+    <div class="detail-panel" id="mcn-panel" >
+        <div class="box mcn">
+            <div class="thum">
+                <img src="globalimg/metropiton.jpg" alt="Assocham India">
+            </div>
+            <div class="dest-content">
+                <h4>Metropolitan College of New York</h4>
+                <!-- <p>Details about Assocham India...</p> -->
+            </div>
+        </div>
+    </div>
+
+   
+	
+
+  <script src="global.js"></script>
+</body>
+</html>

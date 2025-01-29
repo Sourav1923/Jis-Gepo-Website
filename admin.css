@@ -1,0 +1,169 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Sidebar */
+aside {
+    background-color: #2c3e50;
+    color: #fff;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+aside .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+aside .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+aside .logo img {
+    width: 40px;
+}
+
+aside .logo h2 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+aside .sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+aside .sidebar a.active,
+aside .sidebar a:hover {
+    background-color: #34495e;
+}
+
+aside .sidebar a .material-symbols-outlined {
+    font-size: 1.5rem;
+}
+
+/* Main Content */
+.container {
+    margin-left: 250px;
+    padding: 2rem;
+}
+
+main {
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Insights Section */
+.insights {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.insights .collaborations {
+    flex: 1;
+    background: #e3f2fd;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.insights .collaborations .middle .left h3 {
+    font-size: 1rem;
+    color: #007bff;
+}
+
+.insights .collaborations .middle .left h1 {
+    font-size: 1.5rem;
+}
+
+/* Collaboration Requests Table */
+.collaboration-requests table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.collaboration-requests table th,
+.collaboration-requests table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.collaboration-requests table th {
+    font-weight: bold;
+}
+
+.collaboration-requests table td {
+    font-size: 0.9rem;
+}
+
+.collaboration-requests table .Pending {
+    color: #ff9800;
+}
+
+.collaboration-requests table .Approved {
+    color: #4caf50;
+}
+
+.collaboration-requests table .Rejected {
+    color: #f44336;
+}
+
+/* Buttons */
+button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.approve {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+button.reject {
+    background-color: #f44336;
+    color: #fff;
+}
