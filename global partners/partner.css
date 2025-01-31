@@ -1,4 +1,13 @@
-/* partner.css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -8,13 +17,68 @@ body {
 }
 
 header {
-    background-color: #062443;
+    background-color: rgba(0, 115, 255, 0.9); /* Semi-transparent blue */
     color: white;
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 18%; /* Adjust padding if needed */
+    transition: 0.4s ease;
+}
+
+.logo {
+    height: 70%;
+    display: flex;
+    justify-content: flex-start; /* Align logo to the start */
+    margin-right: auto; /* Push the logo to the start of the header */
+}
+
+.logo img {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    height: 2rem;
+    width: 3rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Keep the items aligned to the right */
+}
+
+.navbar a {
+    color: var(--bg-color);
+    font-size: 20px;
+    font-weight: 300;
+    padding: 2px 20px;
+    border-radius: 4px;
+    transition: 0.4s ease;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.navbar a:hover {
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 4px;
+}
+
+#menu-icon {
+    color: var(--bg-color);
+    font-size: 20px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none; /* Hidden by default */
 }
 
 .container {
@@ -30,6 +94,7 @@ header {
     font-size: 2rem;
     font-weight: bold;
     position: relative;
+    margin-top: 120px; /* Adjust this value as needed */
 }
 
 .section-title::after {
@@ -117,10 +182,7 @@ header {
     padding: 0.8rem; /* Adjust padding for better proportions */
     font-size: 1rem;
     display: block;
-    
-
     border-radius: 2rem;
-    font-size: 1rem;
     background-color: #007BFF;
     color: white;
     text-decoration: none;
@@ -131,23 +193,6 @@ header {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
-@media (max-width: 800px) {
-    .read-more-btn {
-        width: 50%; /* Adjust width to fit smaller screens */
-        margin: 0 auto; /* Ensure it's centered */
-        font-size: 0.9rem; /* Slightly reduce the font size */
-        padding: 0.6rem 0.8rem; /* Adjust padding for better fit */
-    }
-}
-
-@media (max-width: 480px) {
-    .read-more-btn {
-        width: 90%; /* Ensure it fits well on very small screens */
-        font-size: 0.8rem; /* Further reduce font size if needed */
-        padding: 0.5rem; /* Smaller padding for compact design */
-    }
-}
-
 
 footer {
     text-align: center;
@@ -157,6 +202,7 @@ footer {
     font-size: 0.9rem;
     border-top: 1px solid #ddd;
 }
+
 /* Call to Action Buttons */
 .interactive-map {
     display: flex;
@@ -166,7 +212,6 @@ footer {
     margin-bottom: 2rem;
     background-color: #f9f9f9; 
     border-radius: 8px;
-    
 }
 
 .interactive-map .cta-button {
@@ -174,6 +219,7 @@ footer {
     padding: 0.8rem 1.5rem;
     border-radius: 25px;
 }
+
 .cta-buttons {
     display: flex;
     justify-content: center;
@@ -199,16 +245,6 @@ footer {
     transform: translateY(-2px);
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1.5rem 0;
-    background-color: #062443;
-    color: #ffffff;
-    font-size: 0.9rem;
-    border-top: 1px solid #ddd;
-}
-
 /* Responsive Styles */
 @media (max-width: 768px) {
     header {
@@ -227,8 +263,6 @@ footer {
     .story {
         padding: 1rem;
     }
-
-    
 }
 
 @media (max-width: 480px) {
@@ -247,5 +281,72 @@ footer {
     .cta-button {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media(max-width: 1040px) {
+    #menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+    }
+    .sticky #menu-icon {
+        color: var(--text-color);
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%; /* Initially hide the navbar */
+        width: 255px;
+        min-height: 45vh;
+        display: flex;
+        border-radius: 0 0 0 4rem;
+        border-left: 2px solid rgb(0, 115, 255);
+        border-bottom: 2px solid rgb(0, 115, 255);
+        flex-direction: column;
+        background: white;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+    }
+    .navbar a:hover,
+    .navbar a.active {
+        color: rgb(0, 115, 255);
+        border-bottom: 3px solid rgb(0, 115, 255);
+    }
+    .navbar li a {
+        color: black; /* Link color in the navbar */
+    }
+    .navbar li {
+        border-top: 2px solid gray; /* Border between navbar items */
+    }
+    
+    .navbar a {
+        display: block; /* Make navbar links block elements */
+        margin: 1.2rem 0; /* Spacing between links */
+    }
+    .sticky .navbar a {
+        color: black; /* Change link color when sticky */
+    }
+    .navbar a:hover {
+        color: var(--text-color); /* Hover color for links */
+    }
+    .open {
+        right: 0; /* Show the navbar when open */
+    }
+
+    .list {
+        width: 50%; /* Adjust list width */
+        margin-bottom: 12px; /* Spacing below list items */
+    }
+    .home-img {
+        width: 100%; /* Full width for home image */
+        height: 100%; /* Full height for home image */
+        display: inline-block;
+    }
+    
+    .home-img img {
+        height: 400px; /* Image height */
+        width: 400px; /* Image width */
+        position: absolute;
+        top: 25%; /* Positioning */
+        right: 10px; /* Positioning */
     }
 }

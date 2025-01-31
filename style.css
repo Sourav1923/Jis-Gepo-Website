@@ -20,6 +20,16 @@ body{
 	background: var(--bg-color);
 	color: var(--text-color);
 }
+/* ScrollBar Design  */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    width: 50px;
+}
 
 /* <!-- header --> */
 header {

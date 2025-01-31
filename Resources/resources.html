@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources & Support</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script defer src="script.js"></script>
+    <style>
+        /* Your existing CSS styles */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            list-style: none;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fc;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(rgb(135, 217, 242), #eef2ff);
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero a {
+            background-color: #007bff;
+            white-space: nowrap;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero a:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .documents {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .doc-list {
+            margin-top: 3%;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .doc {
+            background: white;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .doc:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #007bff;
+            color: white;
+        }
+        /* Edit */
+        .support {
+    text-align: center;
+    padding: 40px;
+    background-color: #007bff;
+    color: white;
+}
+
+.support p {
+    margin-bottom: 20px; /* Add margin below the paragraph */
+}
+
+.support a {
+    display: inline-block; /* Ensure buttons are inline-block */
+    margin-top: 10px; /* Space above buttons */
+    background-color: white;
+    color: #007bff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px; /* Space between buttons */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.support a:hover {
+    background-color: #0056b3;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+        .read-more-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .read-more-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.5rem; /* Smaller font size for mobile */
+            }
+
+            .hero a {
+                padding: 8px 16px; /* Adjust button padding */
+            }
+
+            .resources {
+                padding: 20px; /* Less padding on mobile */
+            }
+
+            .card {
+                padding: 15px; /* Less padding in cards */
+            }
+
+            .support {
+                padding: 20px; /* Less padding in support section */
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column; /* Stack nav items vertically */
+                gap: 10px; /* Less gap between items */
+            }
+
+            .hero {
+                padding: 40px 10px; /* Adjust padding for smaller screens */
+            }
+
+            .hero h1 {
+                font-size: 1.2rem; /* Even smaller font size for very small screens */
+            }
+
+            .hero a {
+                width: 100%; /* Full width button */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header style="background-color: rgba(3, 115, 252, 0.9);">
+        <div class="logo">
+            <img src="../homeimg/jislogo.png" alt="">
+        </div>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../global partners/partner.html">Global Partnerships</a></li>
+            <li><a href="../Program/program.html">Programs</a></li>
+            <li><a href="../event&function/event.html">Events</a></li>
+            <li><a href="../AboutSection/about.html">About Us</a></li>
+            <li><a href="../ContactUs/contactus.html">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <section class="hero">
+        <h1>Resources & Support for Students & Faculty</h1>
+        <p>Find essential guides, policies, and assistance for a smooth experience.</p>
+        <a href="../visaform.html">Apply for Visa</a>
+    </section>
+
+    <section class="resources">
+        <div class="card">
+            <h3>Student Resources</h3>
+            <p>Studying abroad comes with many challenges, but various student resources can help make the transition
+                smoother. One crucial aspect is <b> visa guidance </b>, where universities and agencies assist students
+                in understanding visa requirements, documentation, and application processes to ensure a hassle-free
+                experience.
+                <span class="more-text" style="display: none; color: #000000;">
+                    Another essential factor is <b>financial aid and scholarships</b>, which help students manage
+                    tuition and living expenses. Many universities offer need-based or merit-based scholarships, and
+                    students can also apply for government or private financial aid programs.
+
+                    Adapting to a new environment requires <b>cultural integration </b>programs, such as orientation
+                    sessions, mentorships, and student clubs, which help international students connect with peers and
+                    embrace cultural diversity.
+
+                    Additionally, <b>health services</b> are a priority for students studying abroad. Universities
+                    provide medical facilities, counseling services, and health insurance to ensure students' well-being
+                    and safety during their stay.
+
+                    By utilizing these resources, students can navigate academic and personal challenges effectively,
+                    making their study abroad journey a fulfilling experience.
+                </span>
+            </p>
+            <button class="read-more-btn">Read More</button>
+        </div>
+        <div class="card">
+            <h3>Faculty Resources</h3>
+            <p>
+                Faculty members rely on various resources to support their academic and research activities. Research
+                grants provide essential funding to pursue innovative projects, contributing to advancements in their
+                fields. Securing these grants requires strong proposal-writing skills, which help in effectively
+                presenting research ideas, methodologies, and expected outcomes. Institutions often offer guidelines and
+                workshops to assist faculty in crafting compelling proposals.
+                <span class="more-text" style="display: none; color: #000000;">
+                    Institutional policies govern faculty responsibilities, academic integrity, and professional
+                    conduct, ensuring a structured work environment. Understanding these policies is crucial for
+                    compliance and smooth functioning within the institution. Additionally, faculty members benefit from
+                    various programs, including health insurance, retirement plans, and professional development
+                    opportunities, enhancing their overall well-being and career growth.
+
+                    Access to these resources empowers faculty members to focus on research, teaching, and personal
+                    development while contributing to their institutions' success.
+                </span>
+            </p>
+            <button class="read-more-btn">Read More</button>
+        </div>
+        <div class="card">
+            <h3>International Guidelines</h3>
+            <p>International guidelines play a crucial role in ensuring smooth global interactions, covering areas such
+                as travel, immigration, and cultural exchange. Travel advisories, issued by governments, inform citizens
+                about safety risks, health concerns, and political stability in foreign countries. These advisories help
+                travelers make informed decisions, ensuring their well-being abroad.
+                <span class="more-text" style="display: none; color: #000000;">
+                    Immigration policies vary by country, regulating entry, residency, and work permits for foreign
+                    nationals. These policies are influenced by economic needs, security concerns, and diplomatic
+                    relations. Understanding these regulations is essential for students, workers, and tourists to avoid
+                    legal issues.
+
+                    Cultural exchange programs foster global understanding by allowing individuals to experience
+                    different traditions, languages, and lifestyles. These initiatives, often facilitated by educational
+                    institutions and governments, promote international collaboration and mutual respect.
+
+                    Safety guidelines, both general and country-specific, are designed to protect travelers and
+                    expatriates. These include emergency contact information, health precautions, and security measures
+                    to handle unforeseen situations.
+
+                    By staying informed about international guidelines, travelers and expatriates can navigate global
+                    mobility efficiently while respecting local laws and customs. Governments and organizations
+                    continuously update these policies to enhance safety, promote cultural exchange, and regulate
+                    immigration effectively. Being aware of these aspects ensures a smooth and secure international
+                    experience.
+                </span>
+            </p>
+            <button class="read-more-btn">Read More</button>
+        </div>
+    </section>
+
+    <section class="documents">
+        <h2>Important Documents</h2>
+        <div class="doc-list">
+            <div class="doc">Forms & Applications 📄</div>
+            <div class="doc">Student Handbook 📘</div>
+            <div class="doc">Policy Documents 📜</div>
+        </div>
+    </section>
+
+    <section class="support">
+        <h2>Need More Help?</h2>
+        <p>Our support team is here to assist you with any questions or concerns you may have. </p>
+        <a href="#">Contact Support</a>
+        <a href="../visaform.html">Apply for Visa</a>
+    </section>
+
+    <!-- footer -->
+    <section id="contact" style="background-color: #333;">
+        <div class="footer" style="background-color: #333;">
+            <div class="main">
+                <div class="list">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../global partners/partner.html">Global Partnerships</a></li>
+                        <li><a href="../Program/program.html">Programs</a></li>
+                        <li><a href="../event&function/event.html">Events</a></li>
+                        <li><a href="../ContactUs/contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <h4>Connect</h4>
+                    <div class="social">
+                        <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="end-text">
+                <p>© 2025 JIS GEPO | All Right Reserved</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const header = document.querySelector("header");
+        // NavBar Flexibility 
+        window.addEventListener("scroll", function () {
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        let menu = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+        let isMenuActive = false;
+        let scrollTimeout;
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navbar.classList.toggle('open');
+
+            isMenuActive = menu.classList.contains('bx-x');
+
+            menu.style.color = isMenuActive ? 'black' : 'white';
+        };
+
+        window.onscroll = () => {
+            if (!isMenuActive) {
+                menu.style.color = 'black';
+            }
+
+            clearTimeout(scrollTimeout);
+
+            scrollTimeout = setTimeout(() => {
+                if (!isMenuActive) {
+                    menu.style.color = 'white';
+                }
+            }, 500);
+        };
+
+        // JavaScript for Read More buttons
+        const readMoreBtns = document.querySelectorAll('.read-more-btn');
+
+        readMoreBtns.forEach(btn => {
+            btn.addEventListener('click', (event) => {
+                event.preventDefault();
+                const moreText = btn.previousElementSibling.querySelector('.more-text');
+
+                if (moreText.style.display === 'none' || moreText.style.display === '') {
+                    moreText.style.display = 'inline';
+                    btn.textContent = 'Read Less';
+                } else {
+                    moreText.style.display = 'none';
+                    btn.textContent = 'Read More';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

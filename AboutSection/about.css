@@ -1,0 +1,263 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fafb;
+}
+
+h1, h2, h3 {
+    color: #1e3a8a; /* Blue color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Default padding */
+}
+
+/* Responsive padding adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px; /* Less padding on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 5px; /* Minimal padding on small screens */
+    }
+}
+
+.bg-blue-800 {
+    background-color: #1e40af; /* Dark blue */
+    color: white;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.text-gray-600 {
+    color: #4b5563; /* Gray */
+}
+
+.text-blue-600 {
+    color: #2563eb; /* Blue */
+}
+
+.text-blue-100 {
+    color: #bfdbfe; /* Light blue */
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+.hover\:shadow-xl:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.border-b {
+    border-bottom: 1px solid #e5e7eb; /* Light gray */
+}
+
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-32 {
+    width: 8rem; /* 32 */
+}
+
+.h-32 {
+    height: 8rem; /* 32 */
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.list-disc {
+    list-style-type: disc;
+}
+
+.pl-6 {
+    padding-left: 1.5rem; /* 6 */
+}
+
+.grid {
+    display: grid;
+    gap: 2rem; /* Space between grid items */
+}
+
+/* Responsive grid for medium and larger screens */
+.md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .md\:grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .md\:grid-cols-3 {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+.p-6 {
+    padding: 1.5rem; /* 6 */
+}
+
+.text-lg {
+    font-size: 1.125rem; /* 18px */
+}
+
+@media (max-width: 768px) {
+    .text-lg {
+        font-size: 1rem; /* Smaller size for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-lg {
+        font-size: 0.875rem; /* Even smaller size for small screens */
+    }
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.text-sm {
+    font-size: 0.875rem; /* 14px */
+}
+
+.text-xl {
+    font-size: 1.25rem; /* 20px */
+}
+
+.text-2xl {
+    font-size: 1.5rem; /* 24px */
+}
+
+.text-3xl {
+    font-size: 1.875rem; /* 30px */
+}
+
+.text-4xl {
+    font-size: 2.25rem; /* 36px */
+}
+
+.py-20 {
+    padding-top: 5rem; /* 20 */
+    padding-bottom: 5rem; /* 20 */
+}
+
+.py-16 {
+    padding-top: 4rem; /* 16 */
+    padding-bottom: 4rem; /* 16 */
+}
+
+.max-w-2xl {
+    max-width: 32rem; /* 2xl */
+}
+
+.max-w-3xl {
+    max-width: 48rem; /* 3xl */
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.transition {
+    transition: all 0.3s ease;
+}
+
+.hover\:cursor-pointer:hover {
+    cursor: pointer;
+}
+
+.leadership-card {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    width: 100%; /* Full width for responsiveness */
+    margin-bottom: 2rem; /* Add space between cards */
+    border-radius: 0.5rem; /* Add border radius */
+}
+
+.leadership-card img {
+    margin: 0 auto; /* Center the image */
+    border-radius: 50%; /* Make the image circular */
+    border: 2px solid #1e40af; /* Optional: Add a border around the image */
+}
+
+.faq-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the FAQ section */
+}
+
+.faq-item {
+    width: 100%; /* Full width for FAQ items */
+    max-width: 600px; /* Limit width for larger screens */
+    margin-bottom: 1rem; /* Space between FAQ items */
+}
