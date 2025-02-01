@@ -1,9 +1,9 @@
-/* Global Styles */
+/* Global Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f4f8;
+    background-color: #f4f4f4; /* Changed to match the login page */
     color: #333;
 }
 
@@ -77,15 +77,71 @@ aside .sidebar a .material-symbols-outlined {
 }
 
 main {
-    padding: 1rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
 }
 
-main h1 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Login Page Styling */
+.login-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 0.5rem;
+}
+
+input, select {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.error {
+    color: #f00;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 /* Insights Section */
@@ -95,75 +151,122 @@ main h1 {
     margin-bottom: 2rem;
 }
 
-.insights .collaborations {
+.insight-card {
     flex: 1;
     background: #e3f2fd;
     padding: 1rem;
     border-radius: 8px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.insights .collaborations .middle .left h3 {
+.insight-card h3 {
     font-size: 1rem;
     color: #007bff;
 }
 
-.insights .collaborations .middle .left h1 {
+.insight-card h1 {
     font-size: 1.5rem;
 }
 
-/* Collaboration Requests Table */
-.collaboration-requests table {
+/* Tables */
+table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
+    margin-top: 20px;
 }
 
-.collaboration-requests table th,
-.collaboration-requests table td {
-    padding: 0.75rem;
+table thead th {
+    background-color: #007bff;
+    color: #fff;
     text-align: left;
-    border-bottom: 1px solid #ccc;
+    padding: 12px 10px;
 }
 
-.collaboration-requests table th {
-    font-weight: bold;
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-.collaboration-requests table td {
-    font-size: 0.9rem;
+table tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
 }
 
-.collaboration-requests table .Pending {
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Status Colors */
+.Pending {
     color: #ff9800;
 }
 
-.collaboration-requests table .Approved {
+.Approved {
     color: #4caf50;
 }
 
-.collaboration-requests table .Rejected {
+.Rejected {
     color: #f44336;
 }
 
-/* Buttons */
-button {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+/* Action Buttons */
+button.action {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-button.approve {
-    background-color: #4caf50;
-    color: #fff;
+button.action:hover {
+    background-color: #0056b3;
 }
 
-button.reject {
-    background-color: #f44336;
-    color: #fff;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    aside .sidebar a {
+        padding: 0.5rem;
+    }
+
+    .insights {
+        flex-direction: column;
+    }
+
+    .insight-card {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .login-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
 }

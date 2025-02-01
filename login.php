@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 } elseif ($role === 'faculty') {
                     // Redirect to faculty dashboard
                 } elseif ($role === 'student') {
-                    // Redirect to student dashboard
+                    header('Location: student.php');
                 }
                 exit;
             } else {

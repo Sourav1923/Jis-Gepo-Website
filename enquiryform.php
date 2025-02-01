@@ -1,3 +1,32 @@
+<?php
+session_start();
+include 'db.php'; // Database connection
+
+$responseMessage = "";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $name = $_POST['name'];
+    $college = $_POST['college'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    if (!empty($name) && !empty($college) && !empty($phone) && !empty($email) && !empty($message)) {
+        // Insert into database
+        $stmt = $conn->prepare("INSERT INTO enquiries (name, college, phone, email, message, request_date) VALUES (?, ?, ?, ?, ?, NOW())");
+        $stmt->bind_param('sssss', $name, $college, $phone, $email, $message);
+
+        if ($stmt->execute()) {
+            $responseMessage = "<p class='success'>Thank you for your enquiry, $name! We will get back to you soon.</p>";
+        } else {
+            $responseMessage = "<p class='error'>There was an error processing your request. Please try again later.</p>";
+        }
+    } else {
+        $responseMessage = "<p class='error'>Please fill in all fields.</p>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +38,8 @@
 <body>
     <div class="container">
         <h1>Enquiry Form</h1>
-        <form id="enquiryForm">
+        <?php if (!empty($responseMessage)) echo $responseMessage; ?>
+        <form action="enquiryform.php" method="POST">
             <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required>
@@ -32,8 +62,6 @@
             </div>
             <button type="submit">Submit</button>
         </form>
-        <div id="responseMessage" class="response-message"></div>
     </div>
-    <script src="collabForm.js"></script>
 </body>
 </html>

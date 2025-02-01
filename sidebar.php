@@ -26,7 +26,7 @@ $pendingCount = ($countResult && $countResult->num_rows > 0) ? $countResult->fet
             <span class="material-symbols-outlined">person</span>
             <h3>Users</h3>
         </a>
-        <a href="#">
+        <a href="analytics.php" class="active">
             <span class="material-symbols-outlined">insights</span>
             <h3>Analytics</h3>
         </a>

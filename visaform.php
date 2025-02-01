@@ -1,3 +1,33 @@
+<?php
+session_start();
+include 'db.php'; // Database connection
+
+$responseMessage = "";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $name = $_POST['name'];
+    $college = $_POST['college'];
+    $country = $_POST['country'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    if (!empty($name) && !empty($college) && !empty($country) && !empty($phone) && !empty($email) && !empty($message)) {
+        // Insert into database
+        $stmt = $conn->prepare("INSERT INTO visa_applications (name, college, country, phone, email, message, request_date) VALUES (?, ?, ?, ?, ?, ?, NOW())");
+        $stmt->bind_param('ssssss', $name, $college, $country, $phone, $email, $message);
+
+        if ($stmt->execute()) {
+            $responseMessage = "<p class='success'>Thank you for your submission, $name! Your visa application has been sent successfully.</p>";
+        } else {
+            $responseMessage = "<p class='error'>There was an error processing your request. Please try again later.</p>";
+        }
+    } else {
+        $responseMessage = "<p class='error'>Please fill in all fields.</p>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +39,8 @@
 <body>
     <div class="container">
         <h1>Visa Application Form</h1>
-        <form id="visaApplicationForm">
+        <?php if (!empty($responseMessage)) echo $responseMessage; ?>
+        <form action="visaform.php" method="POST">
             <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required>
@@ -36,8 +67,6 @@
             </div>
             <button type="submit">Submit</button>
         </form>
-        <div id="responseMessage" class="response-message"></div>
     </div>
-    <script src="collabForm.js"></script>
 </body>
 </html>
