@@ -53,7 +53,9 @@ include 'header.php';
     <?php include 'sidebar.php'; ?>
 
     <main>
-        <h1>Admin Dashboard</h1>
+       <div class="fakediv"></div>
+        <h1>Admin Dashboard</h1> 
+        
 
         <!-- Collaboration Requests -->
         <div class="collaboration-requests">
