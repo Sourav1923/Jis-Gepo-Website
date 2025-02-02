@@ -61,7 +61,7 @@ Download and install **[XAMPP](https://www.apachefriends.org/index.html)**.
 - Open your browser and go to **http://localhost/phpmyadmin/**.  
 - Click on **Databases** and create a new database named test.  
 - Import the database:  
-  - Click on the database name test.sql.  
+  - Click on the database named test .  
   - Go to **Import** and upload the provided `test.sql` file from the project folder.  
   - Click **Go** to import.  
 
